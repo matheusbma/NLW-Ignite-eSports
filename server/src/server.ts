@@ -47,15 +47,17 @@ app.get('/games/:id/ads', async (request, response) => {
         }
     })
  
-    return response.json(ads.map(ad => {
-        return {
-            ...ads,
+    return response.send(
+        ads.map(ad => {
+          return {
+            ...ad,
             weekDays: ad.weekDays.split(','),
             hourStart: convertMinutesToHoursString(ad.hourStart),
             hourEnd: convertMinutesToHoursString(ad.hourEnd)
-        }
-    }))
-});
+          };
+        })
+      );
+    });
 
 app.get('/ads/:id/discord', async (request, response) => {
     const adId = request.params.id;
