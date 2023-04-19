@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import { THEME } from '../../theme';
 
 export const styles = StyleSheet.create({
+  scroll: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     alignItems: "center",
@@ -35,6 +38,7 @@ export const styles = StyleSheet.create({
     paddingLeft: 32,
     paddingRight: 64,
     alignItems: "flex-start",
+    marginBottom: 32,
   },
   emptyListText: {
     color: THEME.COLORS.CAPTION_300,

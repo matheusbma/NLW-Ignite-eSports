@@ -72,7 +72,7 @@ app.get('/ads/:id/discord', async (request, response) => {
     })
 
     return response.json({
-        discort: ad.discord,
+        discord: ad.discord,
     })
 });
 

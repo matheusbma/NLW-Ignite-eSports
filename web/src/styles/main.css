@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="time"] {
+    text-align: center;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
